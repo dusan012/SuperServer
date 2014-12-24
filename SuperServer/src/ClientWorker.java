@@ -23,7 +23,7 @@ public class ClientWorker implements Runnable  {
 	
 	
 	//Constructor that allows to one instance of this class to connects on SuperServer 
-	//and also whole array from SuperServer, so we can shift between it's elements
+	//and also use array from SuperServer, so we can shift between it's elements
 	public ClientWorker (Socket socket, ClientWorker[] cworker ) {
 		
 		this.socketForComm = socket;
@@ -61,9 +61,9 @@ public class ClientWorker implements Runnable  {
 		
 			out.println("IP Addresses of the acceptable client: ");
 		
-			/*checking every client in array workers. conditions: one must support desirable
-		 	conversion type. spot in array must not be empty, and request client will
-		 	be excluded from checking. If contions are fullfiled, IP address of client will
+			/*checking every client in array workers. Conditions: one must support desirable
+		 	conversion type. Slot in array must not be empty, and request client will
+		 	be excluded from checking. If contions are fullfiled, IP address of suitable client will
 		 	be sent to request client.
 			 */
 			int counter = 0;
@@ -77,7 +77,7 @@ public class ClientWorker implements Runnable  {
 			}
 			if(counter == 0) out.println("There is no available IP address.");
 			
-			/*If client finished the conversion session with other client, he than returns
+			/*If client finished the conversion session with other client, he than sends results
 			  All the results are stored in result object.
 			  After that, client is asked for another conversion. If he responds with no,
 			  the session is closed.
